@@ -382,7 +382,7 @@ public class Main {
 
 //for loop that displays the seats with email fields that arent "free"
 		for (int i = 0; i<seatReservations.size();i++) {
-			if (seatReservations.get(i).eMail.equals("free")) {
+			if (!seatReservations.get(i).eMail.equals("free")) {
 
 			}else {
 				System.out.println("Seat Num: " +seatReservations.get(i).seatNum);
@@ -403,7 +403,7 @@ public class Main {
 			}
 
 		}
-		System.out.println(seatCancel.size() +" seat(s) have already been reserved");
+		System.out.println(seatCancel.size() +" seat(s) have not been reserved");
 
 		System.out.println("Enter \"R\" to return to main menu");
 		String returnToMenu = read.next();
